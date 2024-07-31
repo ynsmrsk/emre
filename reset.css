@@ -1,0 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+	min-height: 100vh;
+	font-size: 1.1rem;
+  line-height: 1.5;
+	letter-spacing: 0.2;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+	object-fit: cover;
+}
+
+input, button, textarea, select {
+  font: inherit;
+	font-size: inherit;
+}
+
+span, p, h1, h2, h3, h4 {
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4 {
+	text-wrap: balance;
+}
+
+p {
+	text-wrap: pretty;
+}
+
+h1, h2, h3, h4, button, input, label {
+	line-height: 1.1;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
