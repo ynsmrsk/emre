@@ -1,17 +1,18 @@
 *, *::before, *::after {
+  margin: 0;
   box-sizing: border-box;
 }
 
-* {
-  margin: 0;
+body, html {
+	min-height: 100%;
 }
 
 body {
-	min-height: 100vh;
 	font-size: 1.1rem;
   line-height: 1.5;
 	letter-spacing: 0.2;
   -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
 }
 
 img, picture, video, canvas, svg {
