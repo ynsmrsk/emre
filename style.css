@@ -31,6 +31,7 @@ body {
   color: var(--color-foreground);
 	background-color: var(--color-background);
 	accent-color: var(--color-primary)
+	font-style: code;
 }
 
 .balance {
@@ -44,29 +45,22 @@ main {
 }
 
 a {
-	text-decoration-color: var(--color-primary);
+	line-height: 1;
 }
 
-header {
-	display: grid;
-	gap: 16px;
+a:hover {
+	color: var(--color-background);
+	background-color: var(--color-foreground);
+	text-decoration: none;
 }
 
 header a {
 	color: var(--color-foreground);
-}
-
-header h1 {
-	font-size: 20px;
-}
+}	
 
 p {
 	color: var(--color-muted-foreground);
-}
-
-section.projects {
-	margin-top: 50px;
-}
+}	
 
 section.projects h2 {
 	font-size: 18px;
@@ -77,4 +71,5 @@ section.projects .list {
 	display: grid;
 	gap: 12px;
 	justify-items: start;
+	color: var(--color-muted-foreground);
 }
