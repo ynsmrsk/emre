@@ -1,20 +1,19 @@
 :root {
 	font-family: system-ui, sans-serif;
-  --color-background: #eeeeee;
-  --color-text: #111111;
+  --color-background: #fcfcfc;
+  --color-foreground: #0a0a0a;
   --color-primary: #ff4d00;
-	--color-muted: hsl(240 3.7% 15.9%);
-	--color-muted-foreground: hsl(240 3.7% 15.9%);
+	--color-muted: #ececec;
+	--color-muted-foreground: #666666;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #111111;
-    --color-text: #eeeeee;
+    --color-background: #0a0a0a;
+    --color-foreground: #fcfcfc;
     --color-primary: #ff4d00;
-
-    --color-muted: hsl(240 3.7% 15.9%);
-    --color-muted-foreground: hsl(240 5% 64.9%);
+    --color-muted: #2e2e2e;
+		--color-muted-foreground: #a0a0a0;
   }
 }
 
@@ -25,12 +24,11 @@
 }
 
 ::selection {
-    color: var(--color-text);
-    background: var(--color-primary);
+    background: var(--color-muted);
 }
 
 body {
-  color: var(--color-text);
+  color: var(--color-foreground);
 	background-color: var(--color-background);
 	accent-color: var(--color-primary)
 }
@@ -46,9 +44,37 @@ main {
 }
 
 a {
-  color: var(--color-primary);
+	text-decoration-color: var(--color-primary);
+}
+
+header {
+	display: grid;
+	gap: 16px;
+}
+
+header a {
+	color: var(--color-foreground);
+}
+
+header h1 {
+	font-size: 20px;
 }
 
 p {
-	color: light-dark(#666, #888);
+	color: var(--color-muted-foreground);
+}
+
+section.projects {
+	margin-top: 50px;
+}
+
+section.projects h2 {
+	font-size: 18px;
+	margin-bottom: 16px;
+}
+
+section.projects .list {
+	display: grid;
+	gap: 12px;
+	justify-items: start;
 }
