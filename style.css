@@ -1,20 +1,10 @@
 :root {
-	font-family: system-ui, sans-serif;
-  --color-background: #fcfcfc;
-  --color-foreground: #0a0a0a;
-  --color-primary: #ff4d00;
-	--color-muted: #ececec;
-	--color-muted-foreground: #666666;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #0a0a0a;
-    --color-foreground: #fcfcfc;
-    --color-primary: #ff4d00;
-    --color-muted: #2e2e2e;
-		--color-muted-foreground: #a0a0a0;
-  }
+	color-scheme: light dark;
+  --color-background: light-dark(#fcfcfc, #0a0a0a);
+  --color-foreground: light-dark(#0a0a0a, #fcfcfc);
+  --color-primary: light-dark(#ff4d00, #ff4d00);
+	--color-muted: light-dark(#ececec, #2e2e2e);
+	--color-muted-foreground: light-dark(#666666, #a0a0a0);
 }
 
 @supports(color: color(display-p3 1 1 1)) {
@@ -32,6 +22,7 @@ body {
 	background-color: var(--color-background);
 	accent-color: var(--color-primary)
 	font-style: code;
+	font-family: system-ui, sans-serif;
 }
 
 .balance {
