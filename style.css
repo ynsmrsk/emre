@@ -1,42 +1,38 @@
+@view-transition {
+	navigation: auto;
+}
+
 :root {
 	color-scheme: light dark;
-  --color-background: light-dark(#fcfcfc, #0a0a0a);
-  --color-foreground: light-dark(#0a0a0a, #fcfcfc);
-  --color-primary: light-dark(#ff4d00, #ff4d00);
+	--color-primary: #ff3000;
+	--color-background: light-dark(#fafafa, #1d1d1d);
+	--color-foreground: light-dark(#0a0a0a, #fcfcfc);
 	--color-muted: light-dark(#ececec, #2e2e2e);
 	--color-muted-foreground: light-dark(#666666, #a0a0a0);
 }
 
-@supports(color: color(display-p3 1 1 1)) {
-    :root {
-        --color-primary: color(display-p3 0.99 0.4 0.02);
-    }
-}
-
 ::selection {
-    background: var(--color-muted);
+	background: var(--color-muted);
 }
 
 body {
-  color: var(--color-foreground);
+	color: var(--color-foreground);
 	background-color: var(--color-background);
-	accent-color: var(--color-primary)
+	accent-color: var(--color-primary);
 	font-style: code;
 	font-family: system-ui, sans-serif;
 }
 
-.balance {
-  text-wrap: balance;
-}
-
 main {
 	max-width: 700px;
-  padding: 64px 16px;
-  margin-inline: auto;
+	padding: 64px 16px;
+	margin-inline: auto;
 }
 
-a {
-	line-height: 1;
+p {
+	margin-block: 1lh;
+	margin-trim: block;
+	color: var(--color-muted-foreground);
 }
 
 a:hover {
@@ -47,18 +43,20 @@ a:hover {
 
 header a {
 	color: var(--color-foreground);
-}	
-
-p {
-	color: var(--color-muted-foreground);
-}	
-
-section.projects h2 {
-	font-size: 18px;
-	margin-bottom: 16px;
 }
 
-section.projects .list {
+section#projects {
+	h2 {
+		font-size: 18px;
+		margin-bottom: 16px;
+	}
+
+	a {
+		line-height: 1;
+	}
+}
+
+.list {
 	display: grid;
 	gap: 12px;
 	justify-items: start;

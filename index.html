@@ -1,40 +1,82 @@
 <html>
-  <head>
-		<title>Emre</title>
-    <meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="color-scheme" content="light dark" />
-		<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCFC"/>
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A0A0A"/>
-		<meta name="description" content="Software engineer">
-    <link rel="icon" href="favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css?v=1.3" />
-    <link rel="stylesheet" href="reset.css?v=1.3" />
-  </head>
 
-  <body>
-		<main>
-			<header style='margin-bottom: 50px;'>
-				<h1 style='font-size: 20px;'>Yunus Emre Işık</h1>
-				<p style='margin-bottom: 20px;'>Front-end developer ⸺ Istanbul, Turkey.</p>
-				<p style='margin-bottom: 10px;'>Crafting digital products with empathy and purpose while focusing on performance, scalability, accessibility and engaging animations for a memorable experience.</p>
-				<p>You can reach me at <a target='_blank' href='mailto:yunus@emres.site'>yunus@emres.site</a></p>
-			</header>
-			<section class='projects'>
-				<h2>Projects</h2>
-				<div class='list'>
-					<a target="_blank" href="https://immersiveimages.co">immersive.images</a>
-					<a target="_blank" href="https://osmanthewho.com">osmanthewho</a>
-					<a target="_blank" href="https://oneflow.parsdesign.software">vodafone oneflow</a>
-					<a target="_blank" href="https://reshape.store">re.shape</a>
-					<a target="_blank" href="https://bulutyonetim.com">bulut yönetim</a>
-					<a target="_blank" href="https://tusiadsd2.org/">tüsiad sd2</a>
-					<a target="_blank" href="https://otomate.app">otomate</a>
-					<a target="_blank" href="https://shopihq.com">shopi</a>
-					<a target="_blank" href="https://leasingim.com">leasingim</a>
-				</div>
-			</section>
-		</main>
-  </body>
+<head>
+	<title>Emre Işık</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark" />
+	<meta name="theme-color" content="#FF3000" />
+	<meta name="description" content="Software engineer">
+	<link rel="icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="style.css?v=1.3" />
+	<link rel="stylesheet" href="reset.css?v=1.3" />
+</head>
+
+<body>
+	<main>
+		<header>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+			</nav>
+			<h1>Emre Işık</h1>
+			<span>Front-end developer ⸺ Istanbul, Turkey.</span>
+			<p>Crafting digital products with empathy and purpose while focusing on performance, scalability, accessibility
+				and engaging animations for a memorable experience.</p>
+			<p>You can reach me at <a target='_blank' href='mailto:yunus@emres.site'>yunus@emres.site</a></p>
+		</header>
+		<section id='projects'>
+			<h2>Projects</h2>
+			<div class='list'>
+				<a target="_blank" href="https://osmanthewho.com">osmanthewho</a>
+				<a target="_blank" href="https://immersiveimages.vercel.app">immersive.images</a>
+				<a target="_blank" href="https://vodafone-oneflow.vercel.app">vodafone oneflow</a>
+				<a target="_blank" href="https://tusiadsd2.org/">tüsiad sd2</a>
+				<a target="_blank" href="https://reshape.store">re.shape</a>
+				<a target="_blank" href="https://otomate.app">otomate</a>
+				<a target="_blank" href="https://bulutyonetim.com">bulut yönetim</a>
+				<a target="_blank" href="https://shopihq.com">shopi</a>
+				<a target="_blank" href="https://leasingim.com">leasingim</a>
+			</div>
+		</section>
+
+		<button onclick="document.querySelector('#info-dialog').showModal()">show modal</button>
+		<dialog id='info-dialog'>
+			Yunus Emre Işık
+			<form method="dialog">
+				<button>Close</button>
+			</form>
+		</dialog>
+
+		<button popovertarget="mypopover">Show popover</button>
+		<div popover id="mypopover">
+			<p>I'm a Popover! I should animate.</p>
+			<button popovertarget="mypopover">Close</button>
+		</div>
+
+		<!-- ::details-content ile secilebilir -->
+		<details name="group">
+			<summary>One</summary> ... Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum porro, veniam
+			laudantium sint, quibusdam vero consequuntur non similique minima aperiam cumque nobis! Iste accusantium rerum
+			voluptatibus, officiis alias in expedita!
+		</details>
+		<details name="group">
+			<summary>At</summary> ... Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis ab eaque repellat
+			possimus at, tempora officia ducimus non! Deserunt sapiente modi possimus molestiae explicabo iusto vero porro
+			ipsa, recusandae quae.
+		</details>
+		<details name="group">
+			<summary>A</summary> ... Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis ab eaque repellat
+			possimus at, tempora officia ducimus non! Deserunt sapiente modi possimus molestiae explicabo iusto vero porro
+			ipsa, recusandae quae.
+		</details>
+		<details name="group">
+			<summary>Time</summary> ... Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis ab eaque repellat
+			possimus at, tempora officia ducimus non! Deserunt sapiente modi possimus molestiae explicabo iusto vero porro
+			ipsa, recusandae quae.
+		</details>
+	</main>
+</body>
+
 </html>
